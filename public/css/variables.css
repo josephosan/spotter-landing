@@ -1,0 +1,10 @@
+:root {
+    /* color */
+    --color-white: white;
+
+    /* border radius */
+    --medium-border-radius: 20px;
+
+    /* sizes */
+    --navbar-height: 70px;
+}
