@@ -10,9 +10,9 @@
             width: 50%;
             display: flex;
             align-items: center;
+            justify-content: center;
 
             .wrapper {
-                height: 70%;
                 width: 90%;
                 display: flex;
                 flex-direction: column;
@@ -56,6 +56,7 @@
 
                         .title {
                             font-weight: bold;
+                            white-space: nowrap;
                         }
             
                         span {
@@ -88,6 +89,47 @@
                 left: 40%;
                 max-height: 100%;
             }
+        }
+
+    }
+
+    @media (max-width: 1140px)  {
+        .preview {
+            height: auto;
+            width: 100%;
+
+            .left {
+                width: 100%;
+                margin: 40px;
+                height: 100%;
+
+                .wrapper {
+                    width: 100%;
+                }
+            }
+
+            .right {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: 540px) {
+        .buttons {
+            width: 100%;
+
+            .el-button {
+                width: 50%;
+            }
+        }
+
+        .numbers {
+            justify-content: space-between;
+            display: flex;
+        }
+
+        h4 {
+            margin: 10px 0 30px 0 !important;
         }
     }
 

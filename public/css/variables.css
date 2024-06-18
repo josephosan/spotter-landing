@@ -15,4 +15,10 @@
     --medium-font-size: 15px;
     --large-font-size: 20px;
     --huge-font-size: 40px;
+
+    /* break points */
+    --breakpoint-xl: 1140px;
+    --breakpoint-lg: 960px;
+    --breakpoint-md: 720px;
+    --breakpoint-sm: 540px;
 }
