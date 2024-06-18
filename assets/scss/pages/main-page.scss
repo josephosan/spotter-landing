@@ -6,8 +6,93 @@
         display: flex;
         width: 100%;
     
-        .left {}
+        .left {
+            width: 50%;
+            display: flex;
+            align-items: center;
+
+            .wrapper {
+                height: 70%;
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                h1 {
+                    font-size: var(--huge-font-size);
+                    letter-spacing: 1.5px;
+                }
+
+                h4 {
+                    margin: 0;
+                    margin-bottom: 10px;
+                    letter-spacing: 1px;
+                }
+
+                h1, h4 {
+                    color: var(--color-accent);
+                }
+
+                .buttons {
+                    display: flex;
+                    gap: 10px;
+                    margin: 20px 0 40px 0;
+                    
+                    .el-button {
+                        padding: 25px 40px 25px 40px;
+                        font-size: var(--large-font-size);
+                    }
+                }
+            
+                .numbers {
+                    display: flex;
+                    gap: 70px;
+                    color: var(--color-accent);
+            
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+
+                        .title {
+                            font-weight: bold;
+                        }
+            
+                        span {
+                            text-align: right;
+                            font-size: var(--large-font-size);
+                            font-weight: 400;
+
+                            &:dir(ltr) {
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     
-        .right {}
+        .right {
+            width: 50%;
+            position: relative;
+
+            .background {
+                position: absolute;
+                bottom: 30px;
+                left: 30%;
+                width: 400px;
+            }
+
+            .foreground {
+                position: absolute;
+                left: 40%;
+                max-height: 100%;
+            }
+        }
+    }
+
+    .products {
+        background-color: var(--color-accent);
+        height: 500px;
     }
 }

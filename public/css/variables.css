@@ -3,7 +3,7 @@
     --color-white: white;
 
     /* border radius */
-    --medium-border-radius: 20px;
+    --medium-border-radius: 15px;
 
     /* sizes */
     --navbar-height: 70px;
@@ -12,5 +12,7 @@
     --default-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
     /* font sizes */
+    --medium-font-size: 15px;
     --large-font-size: 20px;
+    --huge-font-size: 40px;
 }

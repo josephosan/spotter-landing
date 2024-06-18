@@ -4,6 +4,7 @@
     align-items: center;
     background-color: var(--color-accent);
     box-shadow: var(--default-box-shadow);
+    z-index: 1000;
     
     position: fixed;
     top: 0;
@@ -17,7 +18,7 @@
         align-items: center;
 
         .logo {
-            margin: 0 10px 0 10px;
+            margin: 0 20px 0 10px;
             width: 150px;
             height: 30px;
             border-radius: var(--medium-border-radius);
@@ -28,6 +29,12 @@
 
             .el-button {
                 margin: 0 5px 0 5px;
+                padding: 20px 30px 20px 30px;
+                font-size: var(--medium-font-size);
+                
+                &.el-button--primary {
+                    border: 2px solid var(--color-white) !important;
+                }
             }
         }
     }

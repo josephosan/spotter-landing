@@ -2,6 +2,16 @@ export default {
     auth: {},
     default: {
         nav: {
+            buttons: {
+                primary: {
+                    title: 'ورود',
+                    route: ''
+                },
+                normal: {
+                    title: 'ثبت نام',
+                    route: ''
+                }
+            },
             pages: [
                 {
                     title: 'محصولات',
@@ -19,22 +29,21 @@ export default {
         },
         body: {
             preview: {
-                title: 'Knowledge for everyone, everywhere.',
-                subTitle: 'Accessible education for all.',
-                primaryButton: 'Get Started',
-                normalButton: 'Learn More',
+                title: 'دانش برای همه، در هر کجا!صرف نظر از مکان .',
+                subTitle: 'با استفاده از پلتفرم ما، می‌توانید به صورت رایگان به طیف گسترده‌ای از دوره‌های آموزشی دسترسی پیدا کنید و دانش خود را در زمینه‌های مختلف ارتقا دهید.',primaryButton: 'شروع کنید',
+                normalButton: 'اطلاعات بیشتر',
                 numbers: {
                     field1: {
                         number: 100000,
-                        title: 'Students'
+                        title: 'دانش آموزان'
                     },
                     field2: {
                         number: 1000,
-                        title: 'Indicators'
+                        title: 'افراد دخیل'
                     },
                     field3: {  
                         number: 100,
-                        title: 'Students'
+                        title: 'دانش آموزان'
                     }
                 },
 
