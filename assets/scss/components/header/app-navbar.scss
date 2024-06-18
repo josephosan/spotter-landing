@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--color-accent);
+    box-shadow: var(--default-box-shadow);
     
     position: fixed;
     top: 0;
@@ -14,5 +15,30 @@
     .right {
         display: flex;
         align-items: center;
+
+        .logo {
+            margin: 0 10px 0 10px;
+            width: 150px;
+            height: 30px;
+            border-radius: var(--medium-border-radius);
+        }
+
+        .auth {
+            margin: 0 20px 0 20px;
+
+            .el-button {
+                margin: 0 5px 0 5px;
+            }
+        }
+    }
+
+    .left {
+        margin: 0 20px 0 20px;
+
+        .navbar-link {
+            margin: 0 15px 0 15px;
+            color: var(--color-white);
+            font-size: var(--large-font-size)
+        }
     }
 }

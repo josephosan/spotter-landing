@@ -1,14 +1,14 @@
 <template>
     <div class="app-navbar">
         <div class="right">
-            <div class="logo">logo</div>
+            <img src="/icons/logo.svg" class="logo" />
             <div class="auth">
                 <el-button>Sign up</el-button>
                 <el-button type="primary">Login</el-button>
             </div>
         </div>
         <div class="left">
-            <span v-for="page in navPages" :key="page.title">{{ page.title }}</span>
+            <span class="navbar-link" v-for="page in navPages" :key="page.title">{{ page.title }}</span>
         </div>
     </div>
 </template>
