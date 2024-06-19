@@ -47,5 +47,39 @@
             color: var(--color-white);
             font-size: var(--large-font-size)
         }
+
+        .sidebar-toggle {
+            display: none;
+            color: var(--color-white);
+            
+            .el-icon {
+                cursor: pointer;
+                font-size: 30px;
+                transition: all var(--animation-speed) ease;
+
+
+                &:hover {
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 720px) {
+        .left {
+            .navbar-link {
+                display: none;
+            }
+
+            .sidebar-toggle {
+                display: block;
+            }
+        }
+
+        .right {
+            .auth {
+                display: none;
+            }
+        }
     }
 }

@@ -1,5 +1,6 @@
 <template>
     <AppNavbar />
+    <PhoneSidebar />
     <NuxtPage />
 
     <AppFooter />

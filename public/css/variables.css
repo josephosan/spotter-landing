@@ -16,6 +16,9 @@
     --large-font-size: 20px;
     --huge-font-size: 40px;
 
+    /* animation speed */
+    --animation-speed: 0.35s;
+
     /* break points */
     --breakpoint-xl: 1140px;
     --breakpoint-lg: 960px;
