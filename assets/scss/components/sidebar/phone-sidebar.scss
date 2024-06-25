@@ -1,3 +1,23 @@
 .phone-sidebar {
-    
+  .body {
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5px;
+
+      .el-button {
+        width: 50%;
+        padding: 10px;
+      }
+    }
+
+    .menu {
+      margin-top: 50px;
+
+      ul {
+        padding: 0;
+      }
+    }
+  }
 }
