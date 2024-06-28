@@ -54,6 +54,18 @@ export default {
           background: '/images/student-background.svg'
         }
       }
+    },
+    footer: {
+      buttons: {
+         primary: 'گرفتن اپ' ,
+         normal: 'اپ' 
+      },
+      info: {
+         name: 'Eduverse' ,
+         gmail: 'Eduverse@gmail.com' ,
+         copyright: 'copyright 2024' 
+      }
+
     }
   }
 }
