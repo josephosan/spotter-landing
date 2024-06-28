@@ -40,6 +40,8 @@ export default defineNuxtConfig({
         { name: 'twitter:image', content: '' }
       ],
       link: [
+        { rel: 'stylesheet', type: 'text/css', href: '/css/bootstrap-grid.css' },
+        { rel: 'stylesheet', type: 'text/css', href: '/css/variable-classes.css' },
         { rel: 'stylesheet', type: 'text/css', href: '/css/variables.light.css' },
         { rel: 'stylesheet', type: 'text/css', href: '/css/variables.css' }
       ]

@@ -1,140 +1,167 @@
 .main-page {
-    margin-top: var(--navbar-height);
-    
-    .preview {
-        height: 500px;
+  margin-top: var(--navbar-height);
+
+  .preview {
+    height: 500px;
+    display: flex;
+    width: 100%;
+
+    .left {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .wrapper {
+        width: 90%;
         display: flex;
-        width: 100%;
-    
-        .left {
-            width: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        flex-direction: column;
+        justify-content: space-between;
 
-            .wrapper {
-                width: 90%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-
-                h1 {
-                    font-size: var(--huge-font-size);
-                    letter-spacing: 1.5px;
-                }
-
-                h4 {
-                    margin: 0;
-                    margin-bottom: 10px;
-                    letter-spacing: 1px;
-                }
-
-                h1, h4 {
-                    color: var(--color-accent);
-                }
-
-                .buttons {
-                    display: flex;
-                    gap: 10px;
-                    margin: 20px 0 40px 0;
-                    
-                    .el-button {
-                        padding: 25px 40px 25px 40px;
-                        font-size: var(--large-font-size);
-                    }
-                }
-            
-                .numbers {
-                    display: flex;
-                    gap: 70px;
-                    color: var(--color-accent);
-            
-                    div {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 5px;
-
-                        .title {
-                            font-weight: bold;
-                            white-space: nowrap;
-                        }
-            
-                        span {
-                            text-align: right;
-                            font-size: var(--large-font-size);
-                            font-weight: 400;
-
-                            &:dir(ltr) {
-                                text-align: left;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    
-        .right {
-            width: 50%;
-            position: relative;
-
-            .background {
-                position: absolute;
-                bottom: 30px;
-                left: 30%;
-                width: 400px;
-            }
-
-            .foreground {
-                position: absolute;
-                left: 40%;
-                max-height: 100%;
-            }
-        }
-
-    }
-
-    @media (max-width: 1140px)  {
-        .preview {
-            height: auto;
-            width: 100%;
-
-            .left {
-                width: 100%;
-                margin: 40px;
-                height: 100%;
-
-                .wrapper {
-                    width: 100%;
-                }
-            }
-
-            .right {
-                display: none;
-            }
-        }
-    }
-
-    @media (max-width: 540px) {
-        .buttons {
-            width: 100%;
-
-            .el-button {
-                width: 50%;
-            }
-        }
-
-        .numbers {
-            justify-content: space-between;
-            display: flex;
+        h1 {
+          font-size: var(--huge-font-size);
+          letter-spacing: 1.5px;
         }
 
         h4 {
-            margin: 10px 0 30px 0 !important;
+          margin: 0;
+          margin-bottom: 10px;
+          letter-spacing: 1px;
         }
+
+        h1,
+        h4 {
+          color: var(--color-accent);
+        }
+
+        .buttons {
+          display: flex;
+          gap: 10px;
+          margin: 20px 0 40px 0;
+
+          .el-button {
+            padding: 25px 40px 25px 40px;
+            font-size: var(--large-font-size);
+          }
+        }
+
+        .numbers {
+          display: flex;
+          gap: 70px;
+          color: var(--color-accent);
+
+          div {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .title {
+              font-weight: bold;
+              white-space: nowrap;
+            }
+
+            span {
+              text-align: right;
+              font-size: var(--large-font-size);
+              font-weight: 400;
+
+              &:dir(ltr) {
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
     }
 
-    .products {
-        background-color: var(--color-accent);
-        height: 500px;
+    .right {
+      width: 50%;
+      position: relative;
+
+      .background {
+        position: absolute;
+        bottom: 30px;
+        left: 30%;
+        width: 400px;
+      }
+
+      .foreground {
+        position: absolute;
+        left: 40%;
+        max-height: 100%;
+      }
     }
+  }
+
+  @media (max-width: 1140px) {
+    .preview {
+      height: auto;
+      width: 100%;
+
+      .left {
+        width: 100%;
+        margin: 40px;
+        height: 100%;
+
+        .wrapper {
+          width: 100%;
+        }
+      }
+
+      .right {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 540px) {
+    .buttons {
+      width: 100%;
+
+      .el-button {
+        width: 50%;
+      }
+    }
+
+    .numbers {
+      justify-content: space-between;
+      display: flex;
+    }
+
+    h4 {
+      margin: 10px 0 30px 0 !important;
+    }
+  }
+
+  .products {
+    background-color: var(--color-accent);
+    height: auto;
+
+    .input-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 20px 0 20px;
+
+      .el-input {
+        max-width: 1000px;
+
+        .el-input__wrapper {
+          border-radius: var(--large-border-radius);
+
+          .el-input__prefix {
+            .el-input__prefix-inner {
+              font-size: var(--large-font-size);
+            }
+          }
+        }
+
+        .el-input__inner {
+          padding: 30px 10px 30px 10px;
+          font-size: var(--large-font-size);
+          color: var(--color-accent);
+        }
+      }
+    }
+  }
 }

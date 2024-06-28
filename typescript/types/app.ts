@@ -1,1 +1,1 @@
-export type HTMLAttrs = [{ rel: string, type: string, href: string }]
+export type HTMLAttrs = [{ rel: string; type: string; href: string }]

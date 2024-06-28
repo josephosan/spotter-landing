@@ -1,27 +1,28 @@
 :root {
-    /* color */
-    --color-white: white;
+  /* color */
+  --color-white: white;
 
-    /* border radius */
-    --medium-border-radius: 15px;
+  /* border radius */
+  --medium-border-radius: 15px;
+  --large-border-radius: 30px;
 
-    /* sizes */
-    --navbar-height: 70px;
+  /* sizes */
+  --navbar-height: 70px;
 
-    /* shadows */
-    --default-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  /* shadows */
+  --default-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
-    /* font sizes */
-    --medium-font-size: 15px;
-    --large-font-size: 20px;
-    --huge-font-size: 40px;
+  /* font sizes */
+  --medium-font-size: 15px;
+  --large-font-size: 20px;
+  --huge-font-size: 40px;
 
-    /* animation speed */
-    --animation-speed: 0.35s;
+  /* animation speed */
+  --animation-speed: 0.35s;
 
-    /* break points */
-    --breakpoint-xl: 1140px;
-    --breakpoint-lg: 960px;
-    --breakpoint-md: 720px;
-    --breakpoint-sm: 540px;
+  /* break points */
+  --breakpoint-xl: 1140px;
+  --breakpoint-lg: 960px;
+  --breakpoint-md: 720px;
+  --breakpoint-sm: 540px;
 }

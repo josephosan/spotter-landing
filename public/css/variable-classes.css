@@ -1,0 +1,27 @@
+.clr-main-bg {
+  background-color: var(--main-bg);
+}
+
+.clr-element-bg {
+  background-color: var(--color-element-bg);
+}
+
+.clr-text-primary {
+  color: var(--color-text-primary);
+}
+
+.clr-text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.clr-stroke {
+  color: var(--color-stroke);
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--color-stroke);
+}
+
+.input-border {
+  border: 1px solid var(--color-stroke);
+}
