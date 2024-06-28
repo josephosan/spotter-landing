@@ -53,7 +53,22 @@ export default {
           foreground: '/images/student.png',
           background: '/images/student-background.svg'
         }
+       
       }
-    }
+    },
+     footer: {
+       buttons: {
+         normal: 'دانلود اپ',
+         primary:'شروع'
+       },
+       info: {
+         name: 'eduverse',
+         gmail: 'eduverse@gmail.com',
+         copyright:'copyright 2024'
+         
+     }
+
+
+     }
   }
 }
