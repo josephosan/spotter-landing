@@ -1,46 +1,57 @@
 <template>
-    <div class="main-page">
-        <div class="preview">
-            <div class="right">
-                <img class="background" :src="preview.image.background" />
-                <img class="foreground" :src="preview.image.foreground" />
+  <div class="main-page">
+    <div class="preview">
+      <div class="right">
+        <img class="background" :src="preview.image.background" />
+        <img class="foreground" :src="preview.image.foreground" />
+      </div>
+      <div class="left">
+        <div class="wrapper">
+          <h1>{{ preview.title }}</h1>
+          <h4>{{ preview.subTitle }}</h4>
+          <div class="buttons">
+            <el-button type="primary">{{ preview.primaryButton }}</el-button>
+            <el-button>{{ preview.normalButton }}</el-button>
+          </div>
+          <div class="numbers">
+            <div>
+              <span class="title">{{ preview.numbers.field1.title }}</span>
+              <span>{{ preview.numbers.field1.number }}K+</span>
             </div>
-            <div class="left">
-                <div class="wrapper">
-                    <h1>{{ preview.title }}</h1>
-                    <h4>{{ preview.subTitle }}</h4>
-                    <div class="buttons">
-                        <el-button type="primary">{{ preview.primaryButton }}</el-button>
-                        <el-button>{{ preview.normalButton }}</el-button>
-                    </div>
-                    <div class="numbers">
-                        <div>
-                            <span class="title">{{ preview.numbers.field1.title }}</span>
-                            <span>{{ preview.numbers.field1.number }}K+</span>
-                        </div>
-                        <div>
-                            <span class="title">{{ preview.numbers.field2.title }}</span>
-                            <span>{{ preview.numbers.field2.number }}K+</span>
-                        </div>
-                        <div>
-                            <span class="title">{{ preview.numbers.field3.title }}</span>
-                            <span>{{ preview.numbers.field3.number }}K+</span>
-                        </div>
-                    </div>
-                </div>
+            <div>
+              <span class="title">{{ preview.numbers.field2.title }}</span>
+              <span>{{ preview.numbers.field2.number }}K+</span>
             </div>
+            <div>
+              <span class="title">{{ preview.numbers.field3.title }}</span>
+              <span>{{ preview.numbers.field3.number }}K+</span>
+            </div>
+          </div>
         </div>
-
-        <div class="products">
-            
-        </div>
+      </div>
     </div>
+
+    <div class="products">
+      <div class="input-wrapper">
+        <el-input v-model="productSearchInput" placeholder="جستجو میان دوره ها ..." :prefix-icon="Search" />
+      </div>
+      <div class="row">
+        <ProductCard v-for="card in productCards" :key="card.title" :card-data="card" />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
+import { Search } from '@element-plus/icons-vue'
 import config from '~~/assets/staticData/config'
 
+// //////////////////////// constants
 const preview = config.default.body.preview
+const productCards = config.default.body.products
+
+// //////////////////////// states
+const productSearchInput = ref('')
 </script>
 
 <style lang="scss">
