@@ -88,9 +88,9 @@ export default {
         primary: 'شروع'
       },
       info: {
-        name: 'eduverse',
+        name: 'Eduverse',
         gmail: 'eduverse@gmail.com',
-        copyright: 'copyright 2024'
+        copyright: 'Copyright © 2023, Powered by harshanacz'
       }
     }
   }

@@ -35,7 +35,7 @@
       <div class="input-wrapper">
         <el-input v-model="productSearchInput" placeholder="جستجو میان دوره ها ..." :prefix-icon="Search" />
       </div>
-      <div class="row">
+      <div class="row justify-content-start">
         <ProductCard v-for="card in productCards" :key="card.title" :card-data="card" />
       </div>
     </div>

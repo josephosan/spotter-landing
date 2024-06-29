@@ -1,5 +1,5 @@
 <template>
-  <div class="product-card col-sm d-flex justify-content-center align-items-center">
+  <div class="product-card col-sm col-md-4 d-flex justify-content-center align-items-center">
     <div class="image-wrapper">
       <el-image
         class="image"
