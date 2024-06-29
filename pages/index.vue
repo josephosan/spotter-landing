@@ -39,6 +39,8 @@
         <ProductCard v-for="card in productCards" :key="card.title" :card-data="card" />
       </div>
     </div>
+
+    <div class="features"></div>
   </div>
 </template>
 

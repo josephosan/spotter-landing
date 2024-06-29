@@ -6,8 +6,8 @@
     </div>
     <div class="info">
       <span class="name">{{ footerInfo.name }}</span>
-      <span class="gmail">{{ footerInfo.gmail }}</span>
-      <span class="copyright">{{ footerInfo.copyright }}</span>
+      <span class="text">{{ footerInfo.gmail }}</span>
+      <span class="text">{{ footerInfo.copyright }}</span>
     </div>
   </div>
 </template>

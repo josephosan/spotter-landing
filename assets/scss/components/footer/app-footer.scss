@@ -10,14 +10,15 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    margin: 100px 0 100px 0;
+    margin: 100px 100px 100px 100px;
     gap: 20px;
 
     .el-button {
       margin: 0 5px 0 5px;
-      padding: 20px 30px 20px 30px;
-      font-size: var(--medium-font-size);
+      padding: 30px 70px 30px 70px;
+      font-size: var(--large-font-size);
       width: 200px;
+      letter-spacing: 1.5px;
 
       &.el-button--primary {
         border: 2px solid var(--color-white) !important;
@@ -30,7 +31,7 @@
     align-items: end;
     justify-content: space-between;
     gap: 10px;
-    margin: 120px 30px 120px 30px;
+    margin: 120px 100px 120px 100px;
 
     span {
       color: white;
