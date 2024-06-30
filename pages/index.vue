@@ -46,11 +46,20 @@
         <h2>{{ featuresSection.header.subtitle }}</h2>
       </div>
     </div>
+
+    <div class="body">
+      <FeatureItem v-for="item in featuresSection.items" :key="item.title" :feature="item">
+        <template #icon>
+          <component :is="item.icon" />
+        </template>
+      </FeatureItem>
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { Search } from '@element-plus/icons-vue'
+import { Search, Open, ReadingLamp, Soccer } from '@element-plus/icons-vue'
+import FeatureItem from '~/components/Feature/FeatureItem.vue'
 import config from '~~/assets/staticData/config'
 
 // //////////////////////// constants
