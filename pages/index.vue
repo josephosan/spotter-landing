@@ -40,7 +40,12 @@
       </div>
     </div>
 
-    <div class="features"></div>
+    <div class="features">
+      <div class="title">
+        <h1>{{ featuresSection.header.title }}</h1>
+        <h2>{{ featuresSection.header.subtitle }}</h2>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -51,6 +56,7 @@ import config from '~~/assets/staticData/config'
 // //////////////////////// constants
 const preview = config.default.body.preview
 const productCards = config.default.body.products
+const featuresSection = config.default.body.features
 
 // //////////////////////// states
 const productSearchInput = ref('')

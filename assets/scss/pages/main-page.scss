@@ -168,5 +168,22 @@
   .features {
     height: 500px;
     background-color: var(--color-white);
+    margin: 0 50px 0 50px;
+
+    .title {
+      color: var(--color-accent);
+
+      h1 {
+        margin: 40px 0 5px 0;
+        font-size: var(--huge-font-size);
+        letter-spacing: 1.5px;
+      }
+
+      h2 {
+        opacity: 70%;
+        margin: 0;
+        letter-spacing: 1.5px;
+      }
+    }
   }
 }
