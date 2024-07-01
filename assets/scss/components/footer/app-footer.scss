@@ -34,12 +34,27 @@
     margin: 120px 100px 120px 100px;
 
     span {
-      color: white;
+      color: var(--color-white);
     }
 
     .name {
       font-weight: bolder;
       font-size: var(--huge-font-size);
     }
+  }
+  @media (max-width: 700px) {
+    flex-direction: column;
+    height: auto;
+    .buttons{
+      margin: 50px 0 50px 0;
+     
+    }
+    .info{
+      align-items: center;
+      margin: 0 0 20px 0;
+
+    }
+    
+    
   }
 }
