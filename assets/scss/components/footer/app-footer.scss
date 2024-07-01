@@ -47,11 +47,20 @@
     height: auto;
     .buttons{
       margin: 50px 0 50px 0;
-     
+    .el-button{
+      padding: 24px 56px 24px 56px;
+      font-size: var(--medium-font-size);
+      width: 160px;
+
+    }
     }
     .info{
       align-items: center;
       margin: 0 0 20px 0;
+      font-size: var(--medium-border-radius);
+      .name{
+        font-size: var(--large-border-radius) !important;
+      }
 
     }
     
