@@ -11,9 +11,12 @@ button span {
   font-family: var(--font-family);
 }
 
+.page-wrapper {
+  margin-top: var(--navbar-height);
+}
+
 // removing scrollbar
 ::-webkit-scrollbar {
-  width: 0;
   /* Remove scrollbar space */
   background: transparent;
   opacity: 0;

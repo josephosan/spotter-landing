@@ -4,7 +4,7 @@
             <img src="/icons/logo.svg" class="logo" />
             <div class="auth">
                 <el-button>{{ navButtons.normal.title }}</el-button>
-                <el-button type="primary">{{ navButtons.primary.title }}</el-button>
+                <el-button @click="$router.push({ name: navButtons.primary.route })" type="primary">{{ navButtons.primary.title }}</el-button>
             </div>
         </div>
         <div class="left">

@@ -10,7 +10,7 @@
       <div class="body">
         <div class="buttons">
           <el-button>{{ navButtons.normal.title }}</el-button>
-          <el-button type="primary">{{ navButtons.primary.title }}</el-button>
+          <el-button @click="$router.push({ name: navButtons.primary.route })" type="primary">{{ navButtons.primary.title }}</el-button>
         </div>
 
         <div class="menu">

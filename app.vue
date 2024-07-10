@@ -6,10 +6,23 @@
 
 <script lang="ts" setup>
 import { type HTMLAttrs } from '~~/typescript/types/app'
+import { useAppStore } from './store/app'
+
+const route = useRoute()
+const { phoneSidebarOpen } = storeToRefs(useAppStore())
 
 // ////////////////////////////// computed
 const themeVariables = computed(() => {
   return { rel: 'stylesheet', type: 'text/css', href: '/css/variables.light.css' }
+})
+
+const routeName = computed(() => {
+  return route.name?.toString()
+})
+
+// ////////////////////////////// watchers
+watch(routeName, (newVal, oldVal) => {
+  if (newVal !== oldVal) phoneSidebarOpen.value = false;
 })
 
 

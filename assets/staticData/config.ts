@@ -5,7 +5,7 @@ export default {
       buttons: {
         primary: {
           title: 'ورود',
-          route: ''
+          route: 'dashboard'
         },
         normal: {
           title: 'ثبت نام',

@@ -8,7 +8,3 @@
 
     <AppFooter />
 </template>
-
-<style lang="scss">
-@import '/assets/scss/layouts/default.scss';
-</style>

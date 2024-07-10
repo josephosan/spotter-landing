@@ -35,8 +35,10 @@
       <div class="input-wrapper">
         <el-input v-model="productSearchInput" placeholder="جستجو میان دوره ها ..." :prefix-icon="Search" />
       </div>
-      <div class="row justify-content-start">
-        <ProductCard v-for="card in productCards" :key="card.title" :card-data="card" />
+      <div>
+        <div class="row justify-content-start card-wrapper">
+          <ProductCard v-for="card in productCards" :key="card.title" :card-data="card" />
+        </div>
       </div>
     </div>
 
@@ -48,11 +50,11 @@
     </div>
 
     <div class="body">
-      <FeatureItem v-for="item in featuresSection.items" :key="item.title" :feature="item">
+      <!-- <FeatureItem v-for="item in featuresSection.items" :key="item.title" :feature="item">
         <template #icon>
           <component :is="item.icon" />
         </template>
-      </FeatureItem>
+      </FeatureItem> -->
     </div>
   </div>
 </template>
