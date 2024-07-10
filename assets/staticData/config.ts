@@ -103,7 +103,7 @@ export default {
             title: 'تفکر خلاق',
             desc: 'اطلاعاتی درباره دوره‌ها، برنامه‌ها، و منابع برای توسعه مهارت‌های خلاقانه دانشجویان.',
             button: 'Read More',
-            icon: 'soccer'
+            icon: 'Soccer'
           }
         ]
       }
