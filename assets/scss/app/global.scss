@@ -15,6 +15,10 @@ button span {
   margin-top: var(--navbar-height);
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 // removing scrollbar
 ::-webkit-scrollbar {
   /* Remove scrollbar space */

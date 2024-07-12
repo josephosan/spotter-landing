@@ -1,0 +1,29 @@
+.bread-crumb {
+  margin-top: var(--navbar-height);
+  height: var(--bread-crumb-height);
+  padding: 20px 40px 20px 40px;
+  display: flex;
+  align-items: center;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  .el-breadcrumb {
+    display: flex;
+
+    .item {
+      display: flex;
+      font-size: var(--medium-font-size);
+      letter-spacing: 1.5px;
+
+      .text {
+        &.active {
+          color: var(--color-accent);
+        }
+      }
+
+      .el-icon {
+        margin: 0 20px;
+      }
+    }
+  }
+}
