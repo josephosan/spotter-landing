@@ -3,6 +3,7 @@
   --color-white: white;
 
   /* border radius */
+  --small-border-radius: 5px;
   --medium-border-radius: 15px;
   --large-border-radius: 30px;
 

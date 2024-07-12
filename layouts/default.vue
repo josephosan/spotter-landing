@@ -1,12 +1,12 @@
 <template>
-    <AppNavbar />
-    <PhoneSidebar />
-
-    <div class="page-wrapper">
-        <NuxtPage />
+    <div>
+        <AppNavbar />
+        <PhoneSidebar />
+        <div class="page-wrapper">
+            <NuxtPage />
+        </div>
+        <AppFooter />
     </div>
-
-    <AppFooter />
 </template>
 
 <style lang="scss">

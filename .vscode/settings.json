@@ -1,5 +1,7 @@
 {
-    "cSpell.words": [
-        "pinia"
-    ]
+  "cSpell.words": ["pinia"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "notebook.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true
 }
