@@ -1,11 +1,11 @@
 <template>
     <div class="dashboard-page">
-      <div>
+      <div class="filters">
         <SmartFilters />
       </div>
 
 
-      <div>
+      <div class="body">
         <ProductCardV2 
           :card-data="{
             title: 'Title',

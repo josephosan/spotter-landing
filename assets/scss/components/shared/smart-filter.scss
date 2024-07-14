@@ -1,0 +1,31 @@
+.smart-filter {
+  width: 300px;
+
+  .el-collapse {
+    border-top: 0;
+
+    .el-collapse-item {
+      .el-collapse-item__header {
+        padding: 0 10px;
+
+        &:first-child {
+          border-top: none;
+        }
+
+        i {
+          margin-right: auto;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .el-radio-group {
+    justify-content: start;
+    align-items: start;
+
+    .el-radio {
+      margin-right: 0;
+    }
+  }
+}

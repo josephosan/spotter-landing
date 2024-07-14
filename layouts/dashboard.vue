@@ -3,7 +3,7 @@
     <PhoneSidebar />
     <BreadCrumb />
 
-    <div class="page-wrapper">
+    <div>
         <NuxtPage />
     </div>
 
