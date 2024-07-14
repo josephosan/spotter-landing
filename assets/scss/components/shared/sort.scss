@@ -1,0 +1,21 @@
+.sort {
+  display: flex;
+  width: 100%;
+  border-bottom: 0.3px solid rgba(0, 0, 0, 0.1);
+
+  .item {
+    padding: 10px 30px 10px 30px;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.15s ease;
+
+    &.active {
+      border-bottom: 1px solid var(--color-accent);
+      color: var(--color-accent);
+    }
+
+    &:first-child {
+      cursor: auto;
+    }
+  }
+}

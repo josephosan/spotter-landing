@@ -3,11 +3,65 @@
   gap: 20px;
   padding: 20px;
 
+  .filters {
+  }
+
+  .mobile-filters {
+    display: none;
+    padding: 20px 10px 20px 10px;
+    gap: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    .el-button {
+      border-radius: 0 !important;
+      padding: 20px;
+    }
+  }
+
   .body {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+
+    .products {
+      padding: 30px 10px 10px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      gap: 30px;
+    }
+
+    @media (max-width: 576px) {
+      .products {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .dashboard-page {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+
+    .mobile-filters {
+      display: flex;
+    }
+
+    .filters {
+      display: none;
+    }
+
+    .body {
+      .sort-wrapper {
+        display: none;
+      }
+
+      .products {
+        justify-content: center;
+      }
+    }
   }
 }

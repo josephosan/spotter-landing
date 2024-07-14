@@ -7,6 +7,7 @@
     .el-collapse-item {
       .el-collapse-item__header {
         padding: 0 10px;
+        font-size: var(--medium-font-size);
 
         &:first-child {
           border-top: none;
@@ -16,6 +17,10 @@
           margin-right: auto;
           margin-left: 10px;
         }
+      }
+
+      .el-collapse-item__wrap {
+        font-size: var(--small-font-size);
       }
     }
   }
