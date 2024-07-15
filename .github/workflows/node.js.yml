@@ -23,8 +23,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Print custom variable
-      run: echo "Custom variable is ${{ env.PRIVATE_KEY }}"
 
     - name: SSH into Server and Update
       uses: appleboy/ssh-action@master
