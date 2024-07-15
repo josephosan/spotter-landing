@@ -1,0 +1,39 @@
+name: Node.js CI and Server Update
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build-and-deploy:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+
+    - name: SSH into Server and Update
+      uses: appleboy/ssh-action@master
+      with:
+        host: 109.120.176.63
+        username: joseph
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: 22
+        script: |
+          cd /home/joseph/projects/spotter-landing
+          git pull origin master
+          npm install
+          npm run build
+          sudo systemctl restart spotter-landing
