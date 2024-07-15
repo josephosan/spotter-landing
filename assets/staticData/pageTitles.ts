@@ -1,11 +1,25 @@
 export default {
+    '': [
+        {
+            title: 'خانه',
+            route: ''
+        }
+    ],
     'dashboard': [
+        {
+            title: 'خانه',
+            route: ''
+        },
         {
             title: 'داشبورد',
             route: 'dashboard'
         }
     ],
     'dashboard-id': [
+        {
+            title: 'خانه',
+            route: ''
+        },
         {
             title: 'داشبورد',
             route: 'dashboard'
