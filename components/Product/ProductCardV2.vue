@@ -18,7 +18,7 @@
 
       <div class="footer">
           <div class="price">2,999,999 تومان</div>
-          <el-button><el-icon><ShoppingCart /></el-icon></el-button>
+          <el-button @click="$router.push({ name: 'dashboard-id', params: { id: 1 } })"><el-icon><ShoppingCart /></el-icon></el-button>
       </div>
     </div>
   </div>

@@ -1,11 +1,18 @@
+$color-accent: var(--color-accent);
+
 .product-card-v2 {
   display: flex;
   flex-direction: column;
   min-width: 300px;
   max-width: 300px;
-  border-radius: var(--small-border-radius);
   overflow: hidden;
-  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.15s ease;
+
+  &:hover {
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.2);
+    scale: 1.015;
+  }
 
   .image-wrapper {
     .image {
