@@ -16,8 +16,14 @@ jobs:
         node-version: [20.x]
 
     steps:
+    - uses: actions/checkout@v4
 
-    # SSH into the server and run update commands
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+
     - name: SSH into Server and Update
       uses: appleboy/ssh-action@master
       with:
@@ -27,6 +33,7 @@ jobs:
         port: 22
         script: |
           cd /home/joseph/projects/spotter-landing
-          git pull origin
+          git pull origin master
+          npm install
           npm run build
-          sudo systemctl restart spotter-landing 
+          sudo systemctl restart spotter-landing
