@@ -5,7 +5,7 @@
        <SortProductsModal v-model="sortsVisible" />
        <!-- modal :: end -->
 
-      <div class="mobile-filters">
+      <div id="mobile-filters" class="mobile-filters" :class="[filtersShouldStick && 'sticky-mobile-filters', 'scrolled']">
         <el-button @click="smartFiltersVisible = true">جستجوی پیشرفته <el-icon class="me-2"><Filter /></el-icon></el-button>
         <el-button @click="sortsVisible = true">مرتب سازی  <el-icon class="me-2"><Sort /></el-icon></el-button>
       </div>
@@ -21,7 +21,7 @@
           <SortProducts />
         </div>
 
-        <div class="products">
+        <div class="products" :class="[filtersShouldStick && 'scrolled']">
           <ProductCardV2
             v-for="d in cardMock"
             :key="d.title"
@@ -101,6 +101,44 @@ const cardMock = [
 // ///////////////////////// states
 const smartFiltersVisible = ref(false)
 const sortsVisible = ref(false)
+const filtersShouldStick = ref(false)
+const filtersShouldGoToTop = ref(false)
+
+const navbarHeight = 70
+const navbarPlusBreadHeight = 100
+
+// ///////////////////////// watchers
+onMounted(() => {
+  const navbarHeight = 70;
+  const navbarPlusBreadHeight = navbarHeight + 30; 
+
+  const updateScrollY = () => {
+    // if (window.scrollY < 300) {
+    //   filtersShouldGoToTop.value = false;
+    //   filtersShouldStick.value = false;
+    //   return;
+    // }
+
+    if (window.scrollY > navbarHeight) {
+      filtersShouldStick.value = true;
+      if (window.scrollY > navbarPlusBreadHeight) {
+        filtersShouldGoToTop.value = true;
+      } else {
+        filtersShouldGoToTop.value = false;
+      }
+    } else {
+      filtersShouldStick.value = false;
+      filtersShouldGoToTop.value = false;
+    }
+  };
+
+  window.addEventListener('scroll', updateScrollY);
+
+  // Clean up event listener on component unmount
+  onBeforeUnmount(() => {
+    window.removeEventListener('scroll', updateScrollY);
+  });
+});
 </script>
 
 <style lang="scss">

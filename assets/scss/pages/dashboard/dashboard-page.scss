@@ -11,10 +11,24 @@
     padding: 20px 10px 20px 10px;
     gap: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.15s ease;
 
     .el-button {
       border-radius: 0 !important;
       padding: 20px;
+    }
+
+    &.sticky-mobile-filters {
+      position: fixed;
+      top: calc(var(--navbar-height) + 2 * var(--bread-crumb-height) + 10);
+      left: 20px;
+      right: 20px;
+      z-index: 100;
+      background-color: white;
+    }
+
+    &.scrolled {
+      top: var(--navbar-height);
     }
   }
 
@@ -30,6 +44,10 @@
       flex-wrap: wrap;
       justify-content: start;
       gap: 30px;
+
+      &.scrolled {
+        margin-top: calc(var(--navbar-height) + var(--bread-crumb-height));
+      }
     }
 
     @media (max-width: 576px) {
