@@ -3,11 +3,11 @@
     <div
       class="item"
       v-for="s in navigator"
-      :key="s"
-      @click="activeNavigator = s"
-      :class="[activeNavigator === s && 'active']"
+      :key="s.key"
+      @click="itemClick(s.key)"
+      :class="[activeNavigator === s.key && 'active']"
     >
-      {{ s }}
+      {{ s.value }}
     </div>
   </div>
 </template>
@@ -20,8 +20,17 @@ const { isSingleProductNavigatorStick } = storeToRefs(useAppStore())
 
 const navigator = config.dashboard.singleProduct.navigator
 
+// ////////////////////////////// emits
+const emit = defineEmits(['navItemClick'])
+
 // ////////////////////////////// states
 const activeNavigator = ref('')
+
+// ////////////////////////////// methods
+const itemClick = (s: string) => {
+  activeNavigator.value = s
+  emit('navItemClick', s)
+}
 
 // ////////////////////////////// hooks
 onMounted(() => {

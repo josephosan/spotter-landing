@@ -168,13 +168,22 @@ export default {
         filter: 'جستجوی نام مدرس'
       }
     ],
-    sort: [
-      'پر مخاطب ترین',
-      'جدید ترین', 
-      'بیشترین بازدید'
-    ],
+    sort: ['پر مخاطب ترین', 'جدید ترین', 'بیشترین بازدید'],
     singleProduct: {
-      navigator: ['مشخصات اموزش', 'پیش نمایش', 'نظرات']
+      navigator: [
+        {
+          value: 'مشخصات اموزش',
+          key: 'preview'
+        },
+        {
+          value: 'سرفصل ها',
+          key: 'haadings'
+        },
+        {
+          value: 'نظرات',
+          key: 'comments'
+        }
+      ]
     }
   }
 }
