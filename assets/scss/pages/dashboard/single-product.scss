@@ -1,0 +1,118 @@
+.single-product {
+  .product-wrapper {
+    display: flex;
+    max-width: 1300px;
+    width: 100%;
+
+    &.scrolled {
+      margin-top: var(--product-navigator-height);
+    }
+
+    .summary-box {
+      max-width: 350px;
+      min-width: 350px;
+      padding: 20px;
+      position: relative;
+
+      .box {
+        border: 1px solid var(--color-accent);
+        padding: 10px 20px 10px 20px;
+        gap: 10px;
+        border-radius: var(--small-border-radius);
+
+        position: fixed;
+
+        &.scrolled {
+          top: calc(var(--navbar-height) + var(--bread-crumb-height) + var(--product-navigator-height));
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: right;
+
+        .title {
+          font-weight: bold;
+        }
+
+        .price {
+          display: flex;
+          justify-content: space-between;
+
+          .title {
+            font-weight: bold;
+          }
+        }
+
+        .buy {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px 0 10px 0;
+
+          .shop {
+            .el-icon {
+              margin-left: 5px;
+            }
+          }
+
+          .el-button {
+            margin: 0;
+          }
+        }
+
+        .student-count {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .duration {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .line {
+          width: 100%;
+          border: none;
+          border-bottom: 0.5px solid var(--color-accent);
+        }
+
+        .footer {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          .el-icon {
+            font-size: var(--huge-font-size);
+          }
+
+          .content {
+            display: flex;
+            flex-direction: column;
+
+            .subtitle {
+              font-size: var(--small-font-size);
+            }
+          }
+        }
+      }
+    }
+
+    .course-content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 20px;
+
+      .video-box {
+        min-width: 400px;
+        max-width: 100%;
+        height: 350px;
+        background-color: rgb(237, 237, 237);
+        border-radius: var(--small-border-radius);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

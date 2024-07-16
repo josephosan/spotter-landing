@@ -1,11 +1,11 @@
 <template>
+  <div>
     <AppNavbar />
     <PhoneSidebar />
     <BreadCrumb />
-
     <div>
-        <NuxtPage />
+      <NuxtPage />
     </div>
-
     <AppFooter />
+  </div>
 </template>

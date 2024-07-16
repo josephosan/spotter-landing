@@ -1,0 +1,25 @@
+.product-page-navigator {
+  display: flex;
+  width: 100%;
+  border-bottom: 0.3px solid rgba(0, 0, 0, 0.1);
+  height: var(--product-navigator-height);
+  transition: all 0.15s ease;
+
+  &.sticky-navigator {
+    position: fixed;
+    top: var(--navbar-height);
+    background-color: var(--color-main-bg);
+  }
+
+  .item {
+    padding: 20px 30px 20px 30px;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.15s ease;
+
+    &.active {
+      border-bottom: 1px solid var(--color-accent);
+      color: var(--color-accent);
+    }
+  }
+}

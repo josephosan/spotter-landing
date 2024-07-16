@@ -45,7 +45,9 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', type: 'text/css', href: '/css/variables.light.css' },
         { rel: 'stylesheet', type: 'text/css', href: '/css/variables.css' }
       ]
-    }
+    },
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'layout', mode: 'out-in' }
   },
   vite: {
     plugins: [
