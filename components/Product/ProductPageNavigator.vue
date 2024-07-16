@@ -24,7 +24,7 @@ const navigator = config.dashboard.singleProduct.navigator
 const emit = defineEmits(['navItemClick'])
 
 // ////////////////////////////// states
-const activeNavigator = ref('')
+const activeNavigator = ref('preview')
 
 // ////////////////////////////// methods
 const itemClick = (s: string) => {
