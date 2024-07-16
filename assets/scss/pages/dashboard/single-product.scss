@@ -20,10 +20,15 @@
         gap: 10px;
         border-radius: var(--small-border-radius);
 
+        transition: all 0.15s ease;
+
+        margin-top: calc(var(--product-navigator-height));
+
         position: fixed;
+        top: calc(var(--navbar-height) + var(--bread-crumb-height) + var(--product-navigator-height));
 
         &.scrolled {
-          top: calc(var(--navbar-height) + var(--bread-crumb-height) + var(--product-navigator-height));
+          margin-top: 0;
         }
 
         display: flex;
