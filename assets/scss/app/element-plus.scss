@@ -3,6 +3,10 @@
   border: 1px solid var(--color-accent) !important;
   color: var(--color-accent) !important;
 
+  .el-icon {
+    margin-left: 5px;
+  }
+
   &.el-button--primary {
     border: inherit !important;
     color: var(--color-white) !important;

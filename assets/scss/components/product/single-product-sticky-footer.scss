@@ -1,0 +1,36 @@
+.single-product-sticky-footer {
+  height: var(--single-product-sticky-footer);
+  background-color: var(--color-main-bg);
+  box-shadow: var(--default-box-shadow);
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  z-index: 100;
+
+  padding: 10px 20px 10px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .buttons {
+    display: flex;
+    gap: 5px;
+  }
+
+  .price {
+    span {
+      font-size: var(-medium-font-size);
+      font-weight: bold;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .single-product-sticky-footer {
+    display: none;
+  }
+}
