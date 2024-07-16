@@ -7,8 +7,7 @@
         <div class="course-content">
           <div class="video-box">video</div>
           <div class="description">
-            <!DOCTYPE html>
-            <div>
+            <div class="value" :class="[!descriptionShowMore && 'show-less']">
               <h1>اکسل (Microsoft Office Excel) چیست؟</h1>
               <p>
                 اکسل یک نرم‌افزار صفحه‌ گسترده است. با استفاده از این نرم‌افزار می‌توان اعداد، فرمول‌ها و داده‌های دیگر
@@ -148,6 +147,11 @@
                 </li>
               </ol>
             </div>
+            <div class="button" v-if="!descriptionShowMore">
+              <el-button @click="descriptionShowMore = true">
+                <el-icon><ArrowDown /></el-icon> مشاهده بیشتر
+              </el-button>
+            </div>
           </div>
         </div>
         <div class="summary-box">
@@ -191,10 +195,13 @@
 </template>
 
 <script setup lang="ts">
-import { ShoppingCart, Plus, SuitcaseLine } from '@element-plus/icons-vue'
+import { ShoppingCart, Plus, SuitcaseLine, ArrowDown } from '@element-plus/icons-vue'
 import { useAppStore } from '~/store/app'
 
 const { isSingleProductNavigatorStick } = storeToRefs(useAppStore())
+
+// //////////////////////////////// states
+const descriptionShowMore = ref(false)
 
 definePageMeta({
   layout: 'dashboard'
