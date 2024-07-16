@@ -1,6 +1,6 @@
 <template>
   <div class="single-product">
-    <ProductPageNavigator @navItemClick="scrollToSection" />
+    <ProductPageNavigator @navItemClick="scrollToSection" :activeSection="activeSection" />
 
     <div class="d-flex justify-content-center w-100">
       <div class="product-wrapper" :class="[isSingleProductNavigatorStick && 'scrolled']">
@@ -154,11 +154,11 @@
           <!-- preview :: end -->
 
           <!-- headings :: start -->
-          <div ref="headings" class="headings"></div>
+          <div ref="headings" class="headings" style="height: 1500px"></div>
           <!-- haedings :: end -->
 
           <!-- comments :: start -->
-          <div ref="comments" class="comments"></div>
+          <div ref="comments" class="comments" style="height: 900px"></div>
           <!-- comments :: end -->
         </div>
         <div class="summary-box">
@@ -207,12 +207,20 @@ import { useAppStore } from '~/store/app'
 
 const { isSingleProductNavigatorStick } = storeToRefs(useAppStore())
 
+definePageMeta({
+  layout: 'dashboard'
+})
+
 // //////////////////////////////// states
 const descriptionShowMore = ref(false)
 
 const preview = ref()
 const headings = ref()
 const comments = ref()
+
+const activeSection: Ref<string> = ref('')
+
+let observer: any
 
 // //////////////////////////////// methods
 const scrollToSection = (section: 'preview' | 'comments' | 'headings') => {
@@ -224,8 +232,29 @@ const scrollToSection = (section: 'preview' | 'comments' | 'headings') => {
   sRef.value.scrollIntoView({ behavior: 'smooth' })
 }
 
-definePageMeta({
-  layout: 'dashboard'
+const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      activeSection.value = entry.target.classList[0]
+    }
+  })
+}
+
+// //////////////////////////////// hooks
+onMounted(() => {
+  observer = new IntersectionObserver(handleIntersect, {
+    threshold: 0.5
+  })
+
+  observer.observe(preview.value)
+  observer.observe(headings.value)
+  observer.observe(comments.value)
+})
+
+onBeforeUnmount(() => {
+  if (observer) {
+    observer.disconnect()
+  }
 })
 </script>
 

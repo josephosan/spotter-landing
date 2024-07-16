@@ -23,8 +23,24 @@ const navigator = config.dashboard.singleProduct.navigator
 // ////////////////////////////// emits
 const emit = defineEmits(['navItemClick'])
 
+// ////////////////////////////// props
+const props = defineProps({
+  activeSection: {
+    type: String,
+    required: true
+  }
+})
+
 // ////////////////////////////// states
 const activeNavigator = ref('preview')
+
+// ////////////////////////////// watchers
+watch(
+  () => props.activeSection,
+  (newVal) => {
+    activeNavigator.value = newVal
+  }
+)
 
 // ////////////////////////////// methods
 const itemClick = (s: string) => {

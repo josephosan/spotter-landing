@@ -177,7 +177,7 @@ export default {
         },
         {
           value: 'سرفصل ها',
-          key: 'haadings'
+          key: 'headings'
         },
         {
           value: 'نظرات',

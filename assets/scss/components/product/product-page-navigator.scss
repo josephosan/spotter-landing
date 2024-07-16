@@ -9,6 +9,7 @@
     position: fixed;
     top: var(--navbar-height);
     background-color: var(--color-main-bg);
+    z-index: 100;
   }
 
   .item {
