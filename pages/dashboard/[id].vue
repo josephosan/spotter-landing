@@ -144,6 +144,7 @@
                   </li>
                 </ol>
               </div>
+
               <div class="button" v-if="!descriptionShowMore">
                 <el-button @click="descriptionShowMore = true">
                   <el-icon><ArrowDown /></el-icon> مشاهده بیشتر
@@ -154,7 +155,10 @@
           <!-- preview :: end -->
 
           <!-- headings :: start -->
-          <div ref="headings" class="headings" style="height: 1500px"></div>
+          <div ref="headings" class="headings" style="height: 1500px">
+            <h1>سرفصل‌ها</h1>
+            <Collapse :items="collapseItems" :accordion="true" />
+          </div>
           <!-- haedings :: end -->
 
           <!-- comments :: start -->
@@ -204,6 +208,32 @@
 <script setup lang="ts">
 import { ShoppingCart, Plus, SuitcaseLine, ArrowDown } from '@element-plus/icons-vue'
 import { useAppStore } from '~/store/app'
+
+// Temporary test data until data is fetched from the server
+const collapseItems = [
+  {
+    title: 'درس یکم: معرفی نرم افزار Excel',
+    descriptions: [
+      { text: 'معرفی نرم افزار و کاربردها و ویژگی های نرم افزار', url: '/page1' },
+      { text: 'معرفی زبانه ها و نوار ابزار', url: '/page2' },
+      { text: 'Auto Fill', url: '/' }
+    ]
+  },
+  {
+    title: 'Category 2',
+    descriptions: [
+      { text: 'Item 3', url: '/' },
+      { text: 'Item 4', url: '/' }
+    ]
+  },
+  {
+    title: 'Category 3',
+    descriptions: [
+      { text: 'Item 3', url: '/' },
+      { text: 'Item 4', url: '/' }
+    ]
+  }
+]
 
 const { isSingleProductNavigatorStick } = storeToRefs(useAppStore())
 
