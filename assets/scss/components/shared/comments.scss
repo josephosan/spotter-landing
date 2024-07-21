@@ -1,0 +1,51 @@
+.el-collapse {
+  border: 1px solid rgb(228 228 231);
+  border-radius: var(--small-border-radius);
+
+  .el-collapse-item {
+    border: 1px solid rgb(228 228 231);
+    border-radius: var(--small-border-radius);
+  }
+}
+
+.collapse-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 20px;
+  background-color: black;
+  margin: 0 10px;
+}
+
+.collapse-title-average {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.comment-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-image {
+  border-radius: 100px;
+}
+
+.comment-card {
+  margin-top: 20px;
+}

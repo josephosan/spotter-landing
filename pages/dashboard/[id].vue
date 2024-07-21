@@ -162,7 +162,9 @@
           <!-- haedings :: end -->
 
           <!-- comments :: start -->
-          <div ref="comments" class="comments" style="height: 900px"></div>
+          <div ref="comments" class="comments" style="height: 900px">
+            <Comments :commentsData="commentsData" />
+          </div>
           <!-- comments :: end -->
         </div>
         <div class="summary-box">
@@ -208,6 +210,30 @@
 <script setup lang="ts">
 import { ShoppingCart, Plus, SuitcaseLine, ArrowDown } from '@element-plus/icons-vue'
 import { useAppStore } from '~/store/app'
+
+// Temporary test data until data is fetched from the server
+const commentsData = ref([
+  {
+    title: {
+      numberOfUsers: 60,
+      averageUserRating: 4.7
+    },
+    comments: [
+      {
+        name: 'ممداکبری',
+        profileImage: 'https://via.placeholder.com/40',
+        date: '2024-07-21',
+        description: 'نظر این'
+      },
+      {
+        name: 'اکبر ممدی',
+        profileImage: 'https://via.placeholder.com/40',
+        date: '2024-07-20',
+        description: 'نظر اون'
+      }
+    ]
+  }
+])
 
 // Temporary test data until data is fetched from the server
 const collapseItems = [
