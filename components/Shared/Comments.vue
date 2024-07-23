@@ -1,6 +1,5 @@
 <template>
   <div class="comments-container">
-    <h1 class="title">نظرات</h1>
     <el-collapse class="el-collapse">
       <el-collapse-item v-for="(item, index) in commentsData" :key="index">
         <template #title>
@@ -37,6 +36,7 @@ import { ref } from 'vue'
 import { StarFilled } from '@element-plus/icons-vue'
 import { type IComment } from '~/typescript/interfaces/app'
 
+// ///////////////////////// props
 const props = defineProps({
   commentsData: {
     type: Array as PropType<IComment[]>,
@@ -44,9 +44,10 @@ const props = defineProps({
   }
 })
 
+// ////////////////////////////////// constants
 const commentsData = ref(props.commentsData)
 </script>
 
 <style scoped>
-@import '../../assets/scss/components/shared/comments.scss';
+@import '/assets/scss/components/shared/comments.scss';
 </style>

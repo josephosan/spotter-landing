@@ -20,13 +20,16 @@ import { ref } from 'vue'
 import { useRouter } from '#app'
 import { type ICollapseItem } from '~/typescript/interfaces/app'
 
+// /////////////////////// props
 const props = defineProps<{
   items: ICollapseItem[]
   accordion?: boolean
   onChange?: () => void
 }>()
 
+// ///////////////////////// states
 const activeNames = ref(['0'])
+
 const router = useRouter()
 
 const handleChange = () => {
