@@ -1,0 +1,32 @@
+.el-collapse {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: none;
+
+  .el-collapse-item {
+    border-radius: var(--small-border-radius);
+    overflow: hidden;
+
+    .el-collapse-item__header {
+      font-size: var(--medium-font-size);
+      background-color: rgb(244, 244, 245);
+      padding: 0 10px;
+
+      i {
+        margin-right: auto;
+        margin-left: 10px;
+      }
+    }
+
+    .el-collapse-item__wrap {
+      padding: 0 10px;
+      font-size: var(--medium-font-size);
+      border: none;
+    }
+  }
+
+  .description-item {
+    padding: 10px 0;
+  }
+}
