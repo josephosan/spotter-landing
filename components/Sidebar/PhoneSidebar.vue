@@ -10,7 +10,9 @@
       <div class="body">
         <div class="buttons">
           <el-button>{{ navButtons.normal.title }}</el-button>
-          <el-button @click="$router.push({ name: navButtons.primary.route })" type="primary">{{ navButtons.primary.title }}</el-button>
+          <el-button @click="$router.push({ name: navButtons.primary.route })" type="primary">{{
+            navButtons.primary.title
+          }}</el-button>
         </div>
 
         <div class="menu">
@@ -26,7 +28,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useAppStore } from '~/store/app'
+import { useAppStore } from '~/stores/app'
 import { Close } from '@element-plus/icons-vue'
 import config from '~~/assets/staticData/config'
 

@@ -1,12 +1,12 @@
 <template>
   <client-only>
-      <NuxtLayout />
+    <NuxtLayout />
   </client-only>
 </template>
 
 <script lang="ts" setup>
 import { type HTMLAttrs } from '~~/typescript/types/app'
-import { useAppStore } from './store/app'
+import { useAppStore } from './stores/app'
 
 const route = useRoute()
 const { phoneSidebarOpen } = storeToRefs(useAppStore())
@@ -22,9 +22,8 @@ const routeName = computed(() => {
 
 // ////////////////////////////// watchers
 watch(routeName, (newVal, oldVal) => {
-  if (newVal !== oldVal) phoneSidebarOpen.value = false;
+  if (newVal !== oldVal) phoneSidebarOpen.value = false
 })
-
 
 useHead({
   title: 'Home',

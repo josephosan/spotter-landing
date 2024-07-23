@@ -64,5 +64,13 @@ export default defineNuxtConfig({
         }
       }
     }
+  },
+  runtimeConfig: {
+    public: {
+      BASE_URL: process.env.API_BASE_URL,
+      ACCESS_TOKEN_NAME: '_token_access',
+      REFRESH_TOKEN_NAME: '_token-refresh',
+      THEME: '_theme'
+    }
   }
 })

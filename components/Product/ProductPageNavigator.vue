@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import config from '~/assets/staticData/config'
-import { useAppStore } from '~/store/app'
+import { useAppStore } from '~/stores/app'
 
 const { isSingleProductNavigatorStick } = storeToRefs(useAppStore())
 

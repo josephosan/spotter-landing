@@ -210,7 +210,7 @@
 
 <script setup lang="ts">
 import { ShoppingCart, Plus, SuitcaseLine, ArrowDown } from '@element-plus/icons-vue'
-import { useAppStore } from '~/store/app'
+import { useAppStore } from '~/stores/app'
 
 // Temporary test data until data is fetched from the server
 const commentsData = ref([
