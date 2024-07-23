@@ -155,14 +155,15 @@
           <!-- preview :: end -->
 
           <!-- headings :: start -->
-          <div ref="headings" class="headings" style="height: 1500px">
+          <div ref="headings" class="headings">
             <h1>سرفصل‌ها</h1>
-            <Collapse :items="collapseItems" :accordion="true" />
+            <Collapse :items="collapseItems" :accordion="false" />
           </div>
           <!-- haedings :: end -->
 
           <!-- comments :: start -->
-          <div ref="comments" class="comments" style="height: 900px">
+          <div ref="comments" class="comments">
+            <h1 class="title">نظرات</h1>
             <Comments :commentsData="commentsData" />
           </div>
           <!-- comments :: end -->
