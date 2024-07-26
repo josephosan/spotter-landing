@@ -3,7 +3,7 @@ import { useAppStore } from './app'
 
 export const useAuthStore = defineStore('auth', {
   state: () => ({
-    isLoggedIn: true,
+    isLoggedIn: false,
     phoneNumber: null as null | string,
     password: null as null | string,
     accessToken: null as null | string,

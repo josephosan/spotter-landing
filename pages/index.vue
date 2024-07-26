@@ -10,7 +10,9 @@
           <h1>{{ preview.title }}</h1>
           <h4>{{ preview.subTitle }}</h4>
           <div class="buttons">
-            <el-button type="primary">{{ preview.primaryButton }}</el-button>
+            <el-button type="primary" @click="$router.push({ name: 'dashboard' })">{{
+              preview.primaryButton
+            }}</el-button>
             <el-button>{{ preview.normalButton }}</el-button>
           </div>
           <div class="numbers">
