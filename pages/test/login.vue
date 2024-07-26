@@ -20,6 +20,7 @@
 <script lang="ts" setup>
 import { useAppStore } from '~/stores/app'
 import { useAuthStore } from '~/stores/auth'
+import { useHead } from '@vueuse/head'
 
 const { login } = useAuthStore()
 const { phoneNumber, password } = storeToRefs(useAuthStore())
@@ -48,6 +49,14 @@ const handleLogin = async () => {
     appLoading.value = false
   }, 1000)
 }
+
+useHead({
+  style: [
+    {
+      children: 'html, body { height: 100%; }'
+    }
+  ]
+})
 </script>
 
 <style lang="scss">

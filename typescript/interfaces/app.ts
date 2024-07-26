@@ -26,3 +26,28 @@ export interface IComment {
     description: string
   }>
 }
+
+// course
+export interface ICategory {
+  createdAt: string
+  updatedAt: string
+  id: number
+  name: string
+}
+
+export interface IImage {
+  url: string | null
+  createdAt: string
+  updatedAt: string
+  id: number
+}
+
+export interface ITrainer {
+  createdAt: string
+  updatedAt: string
+  id: number
+  image: IImage
+  name: string
+  certificate: string
+  description: string
+}

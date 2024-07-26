@@ -12,6 +12,7 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
     "@pinia/nuxt": "^0.5.1",
+    "@vueuse/head": "^2.0.0",
     "axios": "^1.7.2",
     "gsap": "^3.12.5",
     "nuxt": "^3.12.2",
