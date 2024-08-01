@@ -33,7 +33,7 @@ export const useAuthStore = defineStore('auth', {
 
       return new Promise((resolve, reject) => {
         $axios
-          .post('account/auth/login', payload)
+          .post('user/account/auth/login', payload)
           .then(({ data }) => {
             this.setAuthToken(data)
             this.isLoggedIn = true
