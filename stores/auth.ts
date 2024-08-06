@@ -1,13 +1,22 @@
 import { defineStore } from 'pinia'
 import { useAppStore } from './app'
+import { type AuthState } from '~/typescript/interfaces/app'
 
 export const useAuthStore = defineStore('auth', {
-  state: () => ({
+  state: (): AuthState => ({
     isLoggedIn: false,
-    phoneNumber: null as null | string,
-    password: null as null | string,
-    accessToken: null as null | string,
-    refreshToken: null as null | string
+    phoneNumber: null,
+    password: null,
+    accessToken: null,
+    refreshToken: null,
+    register: {
+      firstName: null,
+      lastName: null,
+      gender: null,
+      phoneNumber: null,
+      password: null,
+      otpCode: null
+    }
   }),
   actions: {
     setAuthToken(tokens: { accessToken: null | string; refreshToken: null | string }) {
@@ -23,6 +32,7 @@ export const useAuthStore = defineStore('auth', {
       this.setAuthToken({ accessToken: null, refreshToken: null })
     },
 
+    // ////////////////////////// login request
     login() {
       const { $axios } = useNuxtApp()
 
@@ -46,6 +56,7 @@ export const useAuthStore = defineStore('auth', {
       })
     },
 
+    // ////////////////////////// logout request
     logout() {
       const { $config, $notification } = useNuxtApp()
       const { appLoading } = storeToRefs(useAppStore())
@@ -63,6 +74,41 @@ export const useAuthStore = defineStore('auth', {
         appLoading.value = false
         $notification('success', 'موفق', 'با موفقیت خارج شدید!')
       }, 1000)
+    },
+
+    // ////////////////////////// register request
+    registerAction() {
+      const { $axios } = useNuxtApp()
+
+      const payload = {
+        otpCode: this.register.otpCode?.split('').reverse().join(''),
+        phoneNumber: this.register.phoneNumber,
+        firstName: this.register.firstName,
+        lastName: this.register.lastName,
+        gender: this.register.gender,
+        password: this.register.password
+      }
+
+      return new Promise((resolve, reject) => {
+        $axios.post('user/account/register', payload).catch((err) => {
+          reject(err)
+        })
+      })
+    },
+
+    // ////////////////////////// verify otpcode request
+    verify() {
+      const { $axios } = useNuxtApp()
+
+      const payload = {
+        phoneNumber: this.register.phoneNumber
+      }
+
+      return new Promise((resolve, reject) => {
+        $axios.post('user/account/verify', payload).catch((err) => {
+          reject(err)
+        })
+      })
     }
   }
 })

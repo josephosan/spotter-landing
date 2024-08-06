@@ -1,31 +1,33 @@
 <template>
-  <div class="login-box">
-    <div class="login-form">
-      <el-form :model="form" :rules="rules" ref="loginForm">
-        <div class="login-form-header">
-          <p>خوش آمدید</p>
-          <path>با استفاده از نام کاربری و رمز عبور ارسال شده وارد شوید.</path>
-        </div>
-
-        <div class="login-form-input">
-          <el-form-item prop="phoneNumber">
-            <el-input v-model="form.phoneNumber" placeholder="شماره تلفن"></el-input>
-          </el-form-item>
-          <el-form-item prop="password">
-            <el-input v-model="form.password" placeholder="رمز عبور" type="password" show-password></el-input>
-          </el-form-item>
-        </div>
-
-        <div class="login-form-footer">
-          <div>
-            <el-button @click="handleLogin" :loading="loading" type="primary">ورود</el-button>
-            <p class="add-account" @click="handleAddAccount">حساب کاربری ندارید؟</p>
+  <div class="login-page">
+    <div class="login-box">
+      <div class="login-form">
+        <el-form :model="form" :rules="rules" ref="loginForm">
+          <div class="login-form-header">
+            <p>خوش آمدید</p>
+            <path>با استفاده از نام کاربری و رمز عبور ارسال شده وارد شوید.</path>
           </div>
-          <p>رمز عبور خود را فراموش کرده ام</p>
+
+          <div class="login-form-input">
+            <el-form-item prop="phoneNumber">
+              <el-input v-model="form.phoneNumber" placeholder="شماره تلفن"></el-input>
+            </el-form-item>
+            <el-form-item prop="password">
+              <el-input v-model="form.password" placeholder="رمز عبور" type="password" show-password></el-input>
+            </el-form-item>
+          </div>
+
+          <div class="login-form-footer">
+            <div>
+              <el-button @click="handleLogin" :loading="loading" type="primary">ورود</el-button>
+              <p class="add-account" @click="handleAddAccount">حساب کاربری ندارید؟</p>
+            </div>
+            <p>رمز عبور خود را فراموش کرده ام</p>
+          </div>
+        </el-form>
+        <div class="login-img">
+          <img src="/public/images/login.svg" />
         </div>
-      </el-form>
-      <div class="login-img">
-        <img src="/public/images/login.svg" />
       </div>
     </div>
   </div>

@@ -1,41 +1,44 @@
 <template>
-  <div class="otp-box">
-    <div class="otp-form">
-      <div class="otp-header">
-        <p>تایید درخواست</p>
-        <path>کد شش رقمی ارسال شده از طریق پیامک را وارد نمایید</path>
-      </div>
-      <div class="otp-input">
-        <input
-          v-for="(digit, index) in otpDigits"
-          :key="index"
-          v-model="otpDigits[index]"
-          @input="handleInput($event, index)"
-          @keydown.backspace="handleBackspace($event, index)"
-          maxlength="1"
-          type="text"
-          class="otp-inputs"
-          :ref="'otpInput' + index"
-        />
-      </div>
+  <div class="otp-page">
+    <div class="otp-box">
+      <div class="otp-form">
+        <div class="otp-header">
+          <p>تایید درخواست</p>
+          <path>کد شش رقمی ارسال شده از طریق پیامک را وارد نمایید</path>
+        </div>
+        <div class="otp-input">
+          <input
+            v-for="(digit, index) in otpDigits"
+            :key="index"
+            v-model="otpDigits[index]"
+            @input="handleInput($event, index)"
+            @keydown.backspace="handleBackspace($event, index)"
+            maxlength="1"
+            type="text"
+            class="otp-inputs"
+            :ref="'otpInput' + index"
+          />
+        </div>
 
-      <div class="otp-footer">
-        <el-button type="primary" @click="handleClick" :loading="loading">ارسال</el-button>
-        <p :class="{ 'resend-active': canResend }" @click="resendCode">
-          ارسال مجدد کد
-          <span v-if="!canResend">({{ minutes }}:{{ seconds < 10 ? '0' : '' }}{{ seconds }})</span>
-        </p>
+        <div class="otp-footer">
+          <el-button type="primary" @click="handleClick" :loading="loading">ارسال</el-button>
+          <p :class="{ 'resend-active': canResend }" @click="resendCode">
+            ارسال مجدد کد
+            <span v-if="!canResend">({{ minutes }}:{{ seconds < 10 ? '0' : '' }}{{ seconds }})</span>
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { useRegisterStore } from '~/stores/register'
+import { useAuthStore } from '~/stores/auth'
 import { useRouter } from 'vue-router'
 import { ref, onMounted, nextTick } from 'vue'
 
-const registerStore = useRegisterStore()
+const authStore = useAuthStore()
+const { register } = storeToRefs(authStore)
 const { appLoading } = storeToRefs(useAppStore())
 
 // ////////////////////////////////////////// page meta
@@ -96,11 +99,11 @@ const focusNextInput = (index) => {
 
 const handleClick = async () => {
   appLoading.value = true
-  registerStore.otpCode = otpDigits.value.join('')
+  register.value.otpCode = otpDigits.value.join('')
 
   try {
     await router.push('/auth/login')
-    registerStore.register()
+    authStore.registerAction()
   } catch (err) {
     appLoading.value = false
   }

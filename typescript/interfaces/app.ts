@@ -51,3 +51,21 @@ export interface ITrainer {
   certificate: string
   description: string
 }
+
+export interface RegisterState {
+  firstName: string | null
+  lastName: string | null
+  gender: 0 | 1 | null
+  phoneNumber: string | null
+  password: string | null
+  otpCode: string | null
+}
+
+export interface AuthState {
+  isLoggedIn: boolean
+  phoneNumber: string | null
+  password: string | null
+  accessToken: string | null
+  refreshToken: string | null
+  register: RegisterState
+}
