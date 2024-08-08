@@ -17,20 +17,23 @@
       </div>
 
       <div class="footer">
-          <div class="price">2,999,999 تومان</div>
-          <el-button @click="$router.push({ name: 'dashboard-id', params: { id: 1 } })"><el-icon><ShoppingCart /></el-icon></el-button>
+        <div class="price">{{ cardData.price }} تومان</div>
+        <el-button @click="$router.push({ name: 'dashboard-id', params: { id: 1 } })"
+          ><el-icon><ShoppingCart /></el-icon
+        ></el-button>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ShoppingCart } from '@element-plus/icons-vue';
+import { ShoppingCart } from '@element-plus/icons-vue'
 import { type IProductCard } from '~/typescript/interfaces/app'
 
 const props = defineProps({
   cardData: {
-    type: Object as PropType<IProductCard>,
+    // type: Object as PropType<IProductCard>,
+    type: Object as any,
     required: true
   }
 })

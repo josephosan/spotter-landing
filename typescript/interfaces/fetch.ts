@@ -47,3 +47,12 @@ export interface ICourse {
   tags: string[]
   totalPrice: number
 }
+
+export interface ICourseList {
+  courses: ICourse[]
+  hasNext: boolean | null
+  hasPrev: boolean | null
+  totalItems: number | null
+  totalPages: number | null
+  page: number | null
+}

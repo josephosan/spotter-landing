@@ -1,18 +1,57 @@
-.login {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--color-element-bg);
-  border-radius: var(--medium-border-radius);
+.login-page {
+  .login-box {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(119, 154, 228);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-  padding: 20px;
+  .login-form {
+    display: flex;
+    flex-direction: row;
+    box-shadow: var(--default-box-shadow);
+    border: 1px solid rgb(231, 228, 228);
+    border-radius: var(--medium-border-radius);
+    background-color: white;
+    padding: 100px 50px;
+    gap: 60px;
+    width: 65%;
+  }
 
-  .header {
-    margin-bottom: 40px;
+  .login-form-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .login-form-header p {
+    color: rgb(32, 35, 37);
+    font-size: var(--large-font-size);
+    font-weight: 1000;
+  }
+
+  .el-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+  }
+
+  .el-form path {
+    color: rgb(113 113 122);
+    margin-bottom: 20px;
+  }
+
+  .login-form-input {
+    width: 100%;
   }
 
   .el-input {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
     .el-input__wrapper {
       border-radius: var(--medium-border-radius);
@@ -25,16 +64,92 @@
 
   .el-button {
     border-radius: var(--medium-border-radius);
-    padding: 20px;
-    margin-bottom: 40px;
-    margin-top: 20px;
+    padding: 20px 40px;
   }
 
-  .forgot {
-    font-size: var(--small-font-size);
-    color: var(--color-accent);
+  .login-form-footer p {
+    font-size: var(--medium-font-size);
+    color: rgb(113 113 122);
     display: flex;
     justify-content: center;
     cursor: pointer;
+  }
+
+  .login-form-footer p:hover {
+    color: var(--color-accent);
+  }
+
+  .login-form-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .login-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-img img {
+    flex: 1;
+  }
+
+  @media (max-width: 1200px) {
+    .login-form {
+      padding: 20px 20px;
+      width: 80%;
+    }
+
+    .login-img img {
+      width: 400px;
+    }
+
+    .el-input {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .login-form {
+      padding: 100px 20px;
+      gap: 30px;
+    }
+    .login-img img {
+      width: 350px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .login-img {
+      display: none;
+    }
+    .login-img img {
+      width: 400px;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .login-img {
+      display: none;
+    }
+
+    .login-form {
+      width: 100%;
+      padding: 0 0;
+      margin: 0 20px;
+      display: flex;
+    }
+
+    .el-form {
+      width: 100%;
+      padding: 0 20px;
+      display: flex;
+    }
+
+    .login-form-input {
+      width: 100%;
+    }
   }
 }

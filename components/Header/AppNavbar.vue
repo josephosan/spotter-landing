@@ -2,8 +2,8 @@
   <div class="app-navbar">
     <div class="right">
       <img src="/icons/logo.svg" class="logo" />
-      <div class="auth">
-        <el-button>{{ navButtons.normal.title }}</el-button>
+      <div class="auth" v-if="!authStore.isLoggedIn">
+        <el-button @click="$router.push({ name: navButtons.normal.route })">{{ navButtons.normal.title }}</el-button>
         <el-button @click="$router.push({ name: navButtons.primary.route })" type="primary">{{
           navButtons.primary.title
         }}</el-button>
@@ -24,6 +24,10 @@
 import config from '~~/assets/staticData/config'
 import { Menu } from '@element-plus/icons-vue'
 import { useAppStore } from '~/stores/app'
+import { useAuthStore } from '~/stores/auth'
+
+// /////////////////////////// initialize auth store
+const authStore = useAuthStore()
 
 // /////////////////////////// constants
 const navPages = config.default.nav.pages

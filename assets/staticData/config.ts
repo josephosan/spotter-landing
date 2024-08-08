@@ -9,7 +9,7 @@ export default {
         },
         normal: {
           title: 'ثبت نام',
-          route: ''
+          route: 'register'
         }
       },
       pages: [
