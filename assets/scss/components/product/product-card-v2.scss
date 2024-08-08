@@ -36,6 +36,8 @@ $color-accent: var(--color-accent);
       align-items: center;
       justify-content: space-between;
       background-color: var(--color-secondary);
+      margin-bottom: 0;
+      margin-left: 0;
 
       .el-button {
         border-radius: 0 !important;
